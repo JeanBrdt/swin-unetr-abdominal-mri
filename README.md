@@ -36,11 +36,19 @@ Placer les fichiers `*-T2SPIR-src.nii.gz` et `*-T2SPIR-mask.nii.gz` dans `chaos-
 ```
 .
 ├── README.md
+├── requirements.txt
 ├── project.ipynb        # notebook fourni (baseline random forest, calcul du Dice)
-├── notebooks/           # nos expériences (données, U-Net, Swin UNETR)
-├── src/                 # code réutilisable (transforms, modèles, évaluation)
-├── docs/                # restitution bibliographique, figures
-└── chaos-data/          # données (non versionnées)
+├── notebooks/           # nos expériences (exploration, U-Net, Swin UNETR)
+├── src/                 # code réutilisable
+│   ├── config.py        # chemins, découpage train/val/test, étiquettes
+│   ├── data.py          # chargement et transformations MONAI
+│   ├── models.py        # U-Net, Swin UNETR
+│   ├── train.py         # boucle d'entraînement commune
+│   └── evaluate.py      # inférence fenêtre glissante, Dice, visualisations
+├── docs/                # restitution bibliographique
+│   └── figures/
+├── chaos-data/          # données (non versionnées)
+└── outputs/             # poids, prédictions, logs (non versionnés)
 ```
 
 ## Installation
@@ -48,7 +56,7 @@ Placer les fichiers `*-T2SPIR-src.nii.gz` et `*-T2SPIR-mask.nii.gz` dans `chaos-
 ```bash
 git clone <url-du-depot>
 cd swin-unetr-abdominal-mri
-pip install monai nibabel torch matplotlib scikit-image scikit-learn
+pip install -r requirements.txt
 ```
 
 Un GPU est nécessaire pour entraîner les réseaux (Google Colab convient).
