@@ -1,4 +1,5 @@
-chaos-data/
+chaos-data/*
+!chaos-data/README.md
 __MACOSX/
 *.nii
 *.nii.gz
@@ -7,4 +8,6 @@ __MACOSX/
 .ipynb_checkpoints/
 __pycache__/
 .DS_Store
-outputs/
+outputs/**
+!outputs/*/
+!outputs/**/.gitkeep
