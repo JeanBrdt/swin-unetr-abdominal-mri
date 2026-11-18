@@ -3,7 +3,7 @@
 Projet TAF Health (UE cœur « Analyse d'images médicales ») : IMT Atlantique, 2A, 2026.
 Sujet E : Transformers, Swin UNETR pour la segmentation sémantique.
 
-**Équipe :** [Nom 1], [Nom 2], [Nom 3]
+**Équipe :** Sara, Walid, Jean
 **Encadrants :** P.-H. Conze, F. Rousseau
 
 ## Objectif
